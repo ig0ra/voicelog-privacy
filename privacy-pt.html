@@ -152,7 +152,7 @@
             <a href="#" class="active">Português</a>
         </div>
 
-        <p><strong>Última atualização:</strong> 5 de fevereiro de 2026</p>
+        <p><strong>Última atualização:</strong> 20 de fevereiro de 2026</p>
 
         <p>VoiceLog ("nós", "nosso" ou "o aplicativo") está comprometido em proteger sua privacidade. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações quando você usa nosso aplicativo iOS.</p>
 
@@ -170,7 +170,7 @@
         <div class="card">
             <h3>Dados processados através dos nossos servidores:</h3>
             <ul>
-                <li><strong>Arquivos de áudio</strong> — enviados temporariamente para transcrição, depois excluídos</li>
+                <li><strong>Arquivos de áudio</strong> — enviados temporariamente para o Firebase Cloud Storage (Google), depois encaminhados para a AssemblyAI para transcrição e então excluídos</li>
                 <li><strong>Identificador do dispositivo</strong> — ID anônimo para limite de uso (20 transcrições/dia)</li>
             </ul>
         </div>
@@ -205,16 +205,16 @@
         <p>Utilizamos os seguintes serviços de terceiros:</p>
 
         <ul>
-            <li><strong>AssemblyAI</strong> — transcrição de voz para texto. O áudio é processado e excluído após a transcrição. <a href="https://www.assemblyai.com/privacy" target="_blank">Política de Privacidade da AssemblyAI</a></li>
-            <li><strong>Firebase (Google)</strong> — analytics, relatórios de erros e acesso seguro à API. <a href="https://firebase.google.com/support/privacy" target="_blank">Política de Privacidade do Firebase</a></li>
+            <li><strong>AssemblyAI</strong> — transcrição de voz para texto. O áudio é encaminhado para processamento. <a href="https://www.assemblyai.com/privacy" target="_blank">Política de Privacidade da AssemblyAI</a></li>
+            <li><strong>Firebase (Google)</strong> — armazenamento temporário de áudio durante a transcrição, analytics, relatórios de erros e acesso seguro à API. Os arquivos de áudio são excluídos do Firebase Storage após a conclusão do processamento. <a href="https://firebase.google.com/support/privacy" target="_blank">Política de Privacidade do Firebase</a></li>
         </ul>
 
         <h2>4. Armazenamento e segurança de dados</h2>
 
         <ul>
             <li>Todas as gravações e transcrições são armazenadas <strong>localmente no seu dispositivo</strong></li>
-            <li>Os arquivos de áudio são enviados para AssemblyAI apenas quando você solicita uma transcrição</li>
-            <li>Não armazenamos seus arquivos de áudio em nossos servidores após a conclusão da transcrição</li>
+            <li>Os arquivos de áudio são temporariamente enviados para o Firebase Cloud Storage e encaminhados para a AssemblyAI apenas quando você solicita uma transcrição</li>
+            <li>Os arquivos de áudio são excluídos do Firebase Storage após a conclusão da transcrição. Não armazenamos permanentemente seu áudio em nossos servidores</li>
             <li>As comunicações da API são protegidas usando Firebase App Check</li>
         </ul>
 

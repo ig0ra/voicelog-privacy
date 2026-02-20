@@ -159,7 +159,7 @@
             <a href="privacy-pt.html">Português</a>
         </div>
 
-        <p><strong>Last updated:</strong> February 5, 2026</p>
+        <p><strong>Last updated:</strong> February 20, 2026</p>
 
         <p>VoiceLog ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our iOS application.</p>
 
@@ -177,7 +177,7 @@
         <div class="card">
             <h3>Data processed through our servers:</h3>
             <ul>
-                <li><strong>Audio files</strong> — temporarily uploaded for transcription, then deleted</li>
+                <li><strong>Audio files</strong> — temporarily uploaded to Firebase Cloud Storage (Google), then forwarded to AssemblyAI for transcription, then deleted</li>
                 <li><strong>Device identifier</strong> — anonymous ID for rate limiting (20 transcriptions/day)</li>
             </ul>
         </div>
@@ -212,16 +212,16 @@
         <p>We use the following third-party services:</p>
 
         <ul>
-            <li><strong>AssemblyAI</strong> — Speech-to-text transcription. Audio is processed and deleted after transcription. <a href="https://www.assemblyai.com/privacy" target="_blank">AssemblyAI Privacy Policy</a></li>
-            <li><strong>Firebase (Google)</strong> — Analytics, crash reporting, and secure API access. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
+            <li><strong>AssemblyAI</strong> — Speech-to-text transcription. Audio is forwarded for processing. <a href="https://www.assemblyai.com/privacy" target="_blank">AssemblyAI Privacy Policy</a></li>
+            <li><strong>Firebase (Google)</strong> — Temporary audio storage during transcription, analytics, crash reporting, and secure API access. Audio files are deleted from Firebase Storage after processing is complete. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
         </ul>
 
         <h2>4. Data Storage & Security</h2>
 
         <ul>
             <li>All recordings and transcriptions are stored <strong>locally on your device</strong></li>
-            <li>Audio files are uploaded to AssemblyAI only when you request transcription</li>
-            <li>We do not store your audio files on our servers after transcription is complete</li>
+            <li>Audio files are temporarily uploaded to Firebase Cloud Storage and forwarded to AssemblyAI only when you request transcription</li>
+            <li>Audio files are deleted from Firebase Storage after transcription is complete. We do not permanently store your audio on our servers</li>
             <li>API communications are secured using Firebase App Check</li>
         </ul>
 
